@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcadors - Digital Marketing Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1a3c6e',secondary:'#ff6b35'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes slideInRight {
+from {
+opacity: 0;
+transform: translateX(50px);
+}
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+.animate-fadeInUp {
+animation: fadeInUp 0.8s ease-out forwards;
+}
+.animate-slideInRight {
+animation: slideInRight 0.8s ease-out forwards;
+}
+.animate-delay-100 {
+animation-delay: 0.1s;
+}
+.animate-delay-200 {
+animation-delay: 0.2s;
+}
+.animate-delay-300 {
+animation-delay: 0.3s;
+}
+.hero-slider {
+position: relative;
+height: 100vh;
+max-height: 800px;
+overflow: hidden;
+}
+.hero-content {
+position: relative;
+z-index: 10;
+}
+.service-card:hover .service-icon {
+background-color: #1a3c6e;
+color: white;
+}
+.service-card:hover {
+transform: translateY(-10px);
+}
+.team-card:hover .team-overlay {
+opacity: 1;
+}
+.counter-item {
+position: relative;
+}
+.counter-item::after {
+content: "+";
+position: absolute;
+font-weight: 700;
+}
+.portfolio-item:hover .portfolio-overlay {
+opacity: 1;
+}
+.portfolio-filter-btn.active {
+background-color: #1a3c6e;
+color: white;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #1a3c6e;
+border-radius: 4px;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+content: "";
+position: absolute;
+display: block;
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid #1a3c6e;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #1a3c6e;
+}
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+.tab-button {
+position: relative;
+}
+.tab-button.active {
+color: #1a3c6e;
+font-weight: 600;
+}
+.tab-button.active::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: #1a3c6e;
+}
+.tab-content {
+display: none;
+}
+.tab-content.active {
+display: block;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+<div class="container mx-auto px-4 py-4 flex items-center justify-between">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Marcadors</a>
+<nav class="hidden lg:flex items-center space-x-8">
+<a href="#home" class="text-gray-800 hover:text-primary font-medium transition-colors">Home</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium transition-colors">About</a>
+<a href="#services" class="text-gray-800 hover:text-primary font-medium transition-colors">Services</a>
+<a href="#portfolio" class="text-gray-800 hover:text-primary font-medium transition-colors">Portfolio</a>
+<a href="#vision-mission" class="text-gray-800 hover:text-primary font-medium transition-colors">Vision & Mission</a>
+<a href="#team" class="text-gray-800 hover:text-primary font-medium transition-colors">Team</a>
+<a href="#contact" class="text-gray-800 hover:text-primary font-medium transition-colors">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="#contact" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Get a Quote</a>
+<button class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="lg:hidden hidden bg-white w-full absolute top-full left-0 py-4 shadow-md" id="mobile-menu">
+<div class="container mx-auto px-4 flex flex-col space-y-4">
+<a href="#home" class="text-gray-800 hover:text-primary font-medium py-2 transition-colors">Home</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium py-2 transition-colors">About</a>
+<a href="#services" class="text-gray-800 hover:text-primary font-medium py-2 transition-colors">Services</a>
+<a href="#portfolio" class="text-gray-800 hover:text-primary font-medium py-2 transition-colors">Portfolio</a>
+<a href="#vision-mission" class="text-gray-800 hover:text-primary font-medium py-2 transition-colors">Vision & Mission</a>
+<a href="#team" class="text-gray-800 hover:text-primary font-medium py-2 transition-colors">Team</a>
+<a href="#contact" class="text-gray-800 hover:text-primary font-medium py-2 transition-colors">Contact</a>
+<a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors inline-block text-center whitespace-nowrap">Get a Quote</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="hero-slider pt-20" style="background-image: url('https://readdy.ai/api/search-image?query=abstract%20modern%20digital%20marketing%20concept%20with%20flowing%20geometric%20shapes%2C%20dynamic%20curves%2C%20blue%20and%20orange%20gradient%2C%20professional%20futuristic%20design%2C%20minimalist%20style%2C%20high-end%20technology%20visualization%2C%20clean%20and%20sophisticated&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/40"></div>
+<div class="container mx-auto px-4 h-full flex items-center">
+<div class="hero-content w-full max-w-3xl text-white">
+<h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 animate-fadeInUp">
+<span class="text-secondary">Marcadors</span><br>
+<span class="animate-delay-100">Elevating Brands</span><br>
+<span class="animate-delay-200">Through Digital Excellence</span>
+</h1>
+<p class="text-xl md:text-2xl mb-8 opacity-90 animate-fadeInUp animate-delay-300">Transforming Visions into Digital Success Stories</p>
+<div class="flex flex-wrap gap-4 animate-slideInRight animate-delay-300">
+<a href="#services" class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Explore Services</a>
+<a href="#contact" class="bg-secondary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Start Your Journey</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-12 bg-gradient-to-b from-white to-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-10">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Marcadors</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+<p class="max-w-2xl mx-auto text-gray-600 text-lg">We are a team of passionate digital marketers dedicated to helping businesses grow their online presence and achieve their goals.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div class="order-2 lg:order-1 bg-white p-8 rounded-lg shadow-lg">
+<h3 class="text-2xl font-semibold text-primary mb-4 flex items-center">
+<i class="ri-team-line mr-3 text-2xl"></i>
+Who We Are
+</h3>
+<p class="text-gray-600 leading-relaxed"><mark><b>Aman Singh Rathore</mark></b> is the visionary founder of Marcadors, bringing over 10 years of rich industry experience to the forefront. Known for his strategic thinking and solution-oriented approach, Aman has consistently delivered impactful results across diverse domains. Under his leadership, Marcadors has not only thrived in the competitive private sector but has also successfully executed multiple government projects, earning a reputation for reliability and innovation.
+
+    His deep understanding of market dynamics, combined with a passion for technology and design, has positioned him as a trusted name in the industry. Aman believes in creating value through purposeful collaboration, sharp execution, and a forward-thinking mindset.
+    
+    With a track record of excellence and a clear vision for the future, Aman Singh Rathore continues to drive Marcadors towards new horizons of growth and impact.</p>
+<h3 class="text-2xl font-semibold text-primary mb-4 mt-8 flex items-center">
+<i class="ri-lightbulb-line mr-3 text-2xl"></i>
+Our Approach
+</h3>
+<p class="text-gray-600 leading-relaxed mb-8">At Marcadors, we believe in a data-driven approach combined with creative strategies. We don't just implement tactics; we develop comprehensive strategies tailored to your unique business needs and goals. Our success is measured by your success.</p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8 bg-gradient-to-r from-primary/5 to-primary/10 p-6 rounded-lg">
+<div class="text-center transform hover:scale-105 transition-transform duration-300">
+<h4 class="text-4xl font-bold text-primary counter-item mb-2">250</h4>
+<p class="text-gray-700 font-medium">Happy Clients</p>
+</div>
+<div class="text-center">
+<h4 class="text-4xl font-bold text-primary counter-item">500</h4>
+<p class="text-gray-600 mt-2">Projects Completed</p>
+</div>
+<div class="text-center">
+<h4 class="text-4xl font-bold text-primary counter-item">25</h4>
+<p class="text-gray-600 mt-2">Team Members</p>
+</div>
+<div class="text-center">
+<h4 class="text-4xl font-bold text-primary counter-item">6</h4>
+<p class="text-gray-600 mt-2">Years Experience</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 relative">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-lg"></div>
+<img src="aman.jpg">
+<div class="bg-white p-6 rounded-lg shadow-lg max-w-md mx-auto -mt-20 relative z-10">
+<h4 class="text-xl font-semibold text-gray-900">Aman Singh Rathore</h4>
+<p class="text-gray-600">Founder & CEO</p>
+<div class="flex space-x-3 mt-4">
+<a href="https://www.linkedin.com/in/amankumarsinghrathore-branding-marketing/" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="https://www.linkedin.com/in/amankumarsinghrathore-branding-marketing/" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="https://www.linkedin.com/in/amankumarsinghrathore-branding-marketing/" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="max-w-3xl mx-auto text-gray-600">We offer a comprehensive range of digital marketing services to help your business grow and succeed in the digital landscape.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="service-icon w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-primary mb-6 transition-colors duration-300">
+<i class="ri-line-chart-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Digital Marketing Strategy</h3>
+<p class="text-gray-600 mb-6">We develop comprehensive digital marketing strategies tailored to your business goals, target audience, and industry landscape.</p>
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline service-link">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="service-icon w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-primary mb-6 transition-colors duration-300">
+<i class="ri-search-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Search Engine Optimization</h3>
+<p class="text-gray-600 mb-6">Our SEO experts will optimize your website to improve visibility in search engines and drive organic traffic to your business.</p>
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline service-link">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="service-icon w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-primary mb-6 transition-colors duration-300">
+<i class="ri-facebook-circle-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Social Media Management</h3>
+<p class="text-gray-600 mb-6">We create and manage engaging social media content that builds brand awareness and connects with your target audience.</p>
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline service-link">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<!-- Service 4 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="service-icon w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-primary mb-6 transition-colors duration-300">
+<i class="ri-article-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Content Marketing</h3>
+<p class="text-gray-600 mb-6">Our content specialists create valuable, relevant content that attracts and engages your target audience and drives conversions.</p>
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline service-link">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<!-- Service 5 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="service-icon w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-primary mb-6 transition-colors duration-300">
+<i class="ri-advertisement-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Pay-Per-Click Advertising</h3>
+<p class="text-gray-600 mb-6">We manage targeted PPC campaigns that maximize your ROI and drive qualified traffic to your website.</p>
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline service-link">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<!-- Service 6 -->
+<div class="service-card bg-white p-8 rounded-lg shadow-lg transition-all duration-300">
+<div class="service-icon w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-primary mb-6 transition-colors duration-300">
+<i class="ri-code-s-slash-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Web Development</h3>
+<p class="text-gray-600 mb-6">Our development team creates responsive, user-friendly websites that provide an excellent user experience and drive conversions.</p>
+<a href="#contact" class="text-primary font-medium flex items-center hover:underline service-link">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors inline-block whitespace-nowrap">Request a Service</a>
+</div>
+</div>
+</section>
+<!-- Vision & Mission Section -->
+<section id="vision-mission" class="py-20 bg-gray-50" style="background-image: url('https://readdy.ai/api/search-image?query=abstract%20business%20background%20with%20blue%20and%20orange%20geometric%20shapes%2C%20professional%2C%20modern%2C%20corporate%2C%20subtle%20pattern%2C%20light%20background&width=1920&height=600&seq=3&orientation=landscape'); background-size: cover; background-position: center; background-attachment: fixed;">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Vision & Mission</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="max-w-3xl mx-auto text-gray-600">Guiding principles that drive our company forward and shape our approach to digital marketing.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Vision -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+<i class="ri-eye-line ri-2x"></i>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Vision</h3>
+<p class="text-gray-600 mb-6">To be the leading digital marketing agency that transforms businesses through innovative digital strategies, creating meaningful connections between brands and their audiences.</p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary mr-3 mt-1">
+<i class="ri-check-line"></i>
+</div>
+<p class="text-gray-600">Pioneering digital marketing solutions that set industry standards</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary mr-3 mt-1">
+<i class="ri-check-line"></i>
+</div>
+<p class="text-gray-600">Creating lasting impact through strategic digital transformations</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-primary/10 text-primary mr-3 mt-1">
+<i class="ri-check-line"></i>
+</div>
+<p class="text-gray-600">Building a global presence while maintaining personalized service</p>
+</div>
+</div>
+</div>
+<!-- Mission -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-secondary/10 text-secondary mb-6">
+<i class="ri-flag-line ri-2x"></i>
+</div>
+<h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h3>
+<p class="text-gray-600 mb-6">To empower businesses of all sizes with cutting-edge digital marketing strategies that drive growth, increase brand visibility, and deliver measurable results.</p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-secondary/10 text-secondary mr-3 mt-1">
+<i class="ri-check-line"></i>
+</div>
+<p class="text-gray-600">Delivering data-driven strategies that maximize ROI</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-secondary/10 text-secondary mr-3 mt-1">
+<i class="ri-check-line"></i>
+</div>
+<p class="text-gray-600">Fostering long-term partnerships based on transparency and results</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center rounded-full bg-secondary/10 text-secondary mr-3 mt-1">
+<i class="ri-check-line"></i>
+</div>
+<p class="text-gray-600">Continuously evolving our expertise to stay ahead of digital trends</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Values -->
+<div class="mt-16">
+<h3 class="text-2xl font-semibold text-gray-900 mb-8 text-center">Our Core Values</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-lg text-center">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+<i class="ri-creativity-line ri-xl"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Innovation</h4>
+<p class="text-gray-600 text-sm">Embracing new ideas and technologies</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg text-center">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+<i class="ri-team-line ri-xl"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Collaboration</h4>
+<p class="text-gray-600 text-sm">Working together to achieve excellence</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg text-center">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+<i class="ri-shield-check-line ri-xl"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Integrity</h4>
+<p class="text-gray-600 text-sm">Maintaining honesty and transparency</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg text-center">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+<i class="ri-customer-service-2-line ri-xl"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Client Focus</h4>
+<p class="text-gray-600 text-sm">Prioritizing client success above all</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-lg text-center">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mx-auto mb-4">
+<i class="ri-bar-chart-grouped-line ri-xl"></i>
+</div>
+<h4 class="text-lg font-semibold text-gray-900 mb-2">Excellence</h4>
+<p class="text-gray-600 text-sm">Striving for the highest quality in all we do</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Portfolio</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="max-w-3xl mx-auto text-gray-600">Explore our successful projects and see how we've helped businesses achieve their digital marketing goals.</p>
+</div>
+<!-- Portfolio Filter -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="portfolio-filter-btn active px-6 py-2 !rounded-button bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors whitespace-nowrap" data-filter="all">All Projects</button>
+<button class="portfolio-filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors whitespace-nowrap" data-filter="digital-marketing">Digital Marketing</button>
+<button class="portfolio-filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors whitespace-nowrap" data-filter="seo">SEO</button>
+<button class="portfolio-filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors whitespace-nowrap" data-filter="social-media">Social Media</button>
+<button class="portfolio-filter-btn px-6 py-2 !rounded-button bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors whitespace-nowrap" data-filter="web-development">Web Development</button>
+</div>
+<!-- Portfolio Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Portfolio Item 1 -->
+<div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg" data-category="digital-marketing">
+<img src="https://readdy.ai/api/search-image?query=professional%20e-commerce%20website%20design%20mockup%20on%20laptop%20screen%2C%20modern%2C%20clean%20layout%2C%20shopping%20interface%2C%20product%20display%2C%20high%20quality&width=600&height=400&seq=4&orientation=landscape" alt="E-commerce Website Redesign" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">E-commerce Website Redesign</h3>
+<p class="text-white text-center mb-4">Increased conversion rate by 45% through strategic UX improvements and SEO optimization</p>
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">View Case Study</a>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg" data-category="social-media">
+<img src="https://readdy.ai/api/search-image?query=social%20media%20marketing%20campaign%20mockup%20showing%20Instagram%20and%20Facebook%20posts%20for%20a%20fashion%20brand%2C%20professional%20graphics%2C%20cohesive%20branding%2C%20engagement%20statistics%2C%20high%20quality&width=600&height=400&seq=5&orientation=landscape" alt="Social Media Campaign" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">Social Media Campaign</h3>
+<p class="text-white text-center mb-4">Generated 200% increase in engagement and 35% growth in followers for a fashion brand</p>
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">View Case Study</a>
+</div>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg" data-category="seo">
+<img src="https://readdy.ai/api/search-image?query=SEO%20analytics%20dashboard%20showing%20improved%20search%20rankings%2C%20traffic%20growth%20charts%2C%20keyword%20performance%20metrics%2C%20professional%20data%20visualization%2C%20high%20quality&width=600&height=400&seq=6&orientation=landscape" alt="SEO Optimization" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">SEO Optimization</h3>
+<p class="text-white text-center mb-4">Achieved 150% increase in organic traffic and first-page rankings for competitive keywords</p>
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">View Case Study</a>
+</div>
+</div>
+<!-- Portfolio Item 4 -->
+<div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg" data-category="web-development">
+<img src="https://readdy.ai/api/search-image?query=responsive%20website%20design%20mockup%20showing%20desktop%2C%20tablet%2C%20and%20mobile%20versions%20of%20a%20business%20website%2C%20modern%20clean%20design%2C%20professional%20layout%2C%20high%20quality&width=600&height=400&seq=7&orientation=landscape" alt="Responsive Website Development" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">Responsive Website Development</h3>
+<p class="text-white text-center mb-4">Built a modern, responsive website that improved mobile traffic by 70% and reduced bounce rate by 35%</p>
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">View Case Study</a>
+</div>
+</div>
+<!-- Portfolio Item 5 -->
+<div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg" data-category="digital-marketing">
+<img src="https://readdy.ai/api/search-image?query=digital%20marketing%20campaign%20results%20dashboard%20showing%20PPC%20advertising%20performance%2C%20conversion%20metrics%2C%20ROI%20analysis%2C%20professional%20data%20visualization%2C%20high%20quality&width=600&height=400&seq=8&orientation=landscape" alt="PPC Campaign" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">PPC Campaign</h3>
+<p class="text-white text-center mb-4">Delivered 300% ROI with strategic PPC campaigns targeting high-value customer segments</p>
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">View Case Study</a>
+</div>
+</div>
+<!-- Portfolio Item 6 -->
+<div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg" data-category="social-media">
+<img src="https://readdy.ai/api/search-image?query=content%20marketing%20strategy%20document%20showing%20blog%20posts%2C%20infographics%2C%20and%20video%20content%20plan%2C%20editorial%20calendar%2C%20performance%20metrics%2C%20professional%20layout%2C%20high%20quality&width=600&height=400&seq=9&orientation=landscape" alt="Content Marketing Strategy" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">Content Marketing Strategy</h3>
+<p class="text-white text-center mb-4">Created a comprehensive content strategy that increased blog traffic by 200% and generated 45% more leads</p>
+<a href="#" class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">View Case Study</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors inline-block whitespace-nowrap">Start Your Project</a>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Client Testimonials</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="max-w-3xl mx-auto text-gray-600">Hear what our clients have to say about their experience working with Marcadors.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="flex justify-center mb-6">
+<div class="flex text-secondary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6 italic">"Marcadors transformed our online presence completely. Their SEO strategy helped us rank for competitive keywords, and our organic traffic has increased by 200% in just six months. Highly recommended!"</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20Indian%20businessman%20in%20his%2040s%2C%20formal%20attire%2C%20neutral%20background%2C%20high%20quality%20portrait&width=100&height=100&seq=10&orientation=squarish" alt="Rajesh Mehta" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="text-gray-900 font-semibold">Rajesh Mehta</h4>
+<p class="text-gray-600 text-sm">CEO, TechSolutions India</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="flex justify-center mb-6">
+<div class="flex text-secondary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6 italic">"The social media strategy developed by Marcadors helped us connect with our target audience in ways we never thought possible. Our engagement rates have skyrocketed, and we're seeing real business results."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20Indian%20businesswoman%20in%20her%2030s%2C%20modern%20business%20attire%2C%20confident%20pose%2C%20neutral%20background%2C%20high%20quality%20portrait&width=100&height=100&seq=11&orientation=squarish" alt="Priya Sharma" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="text-gray-900 font-semibold">Priya Sharma</h4>
+<p class="text-gray-600 text-sm">Marketing Director, Fashion Forward</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="flex justify-center mb-6">
+<div class="flex text-secondary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6 italic">"Working with Marcadors on our website redesign was a game-changer. The new site is not only beautiful but also converts at a much higher rate. Our e-commerce sales have increased by 75% since launch."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20Indian%20businessman%20in%20his%2030s%2C%20casual%20business%20attire%2C%20friendly%20smile%2C%20neutral%20background%2C%20high%20quality%20portrait&width=100&height=100&seq=12&orientation=squarish" alt="Vikram Patel" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="text-gray-900 font-semibold">Vikram Patel</h4>
+<p class="text-gray-600 text-sm">Founder, HomeStyle</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section id="team" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="max-w-3xl mx-auto text-gray-600">Our talented team of digital marketing experts is dedicated to helping your business succeed online.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Team Member 1 -->
+<div class="team-card group relative overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20an%20Indian%20businessman%20in%20his%2030s%2C%20wearing%20a%20modern%20business%20suit%2C%20confident%20pose%2C%20office%20setting%2C%20professional%20headshot%2C%20high%20quality%2C%20studio%20lighting%2C%20neutral%20background&width=400&height=500&seq=13&orientation=portrait" alt="Aman Singh Rathore" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-900">Aman Singh Rathore</h3>
+<p class="text-gray-600">Founder & CEO</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">Aman Singh Rathore</h3>
+<p class="text-white mb-4">Founder & CEO</p>
+<p class="text-white text-center mb-6">With over 15 years of experience in digital marketing, Aman leads our team with vision and expertise.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="team-card group relative overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20an%20Indian%20businesswoman%20in%20her%2030s%2C%20wearing%20a%20modern%20business%20outfit%2C%20confident%20pose%2C%20office%20setting%2C%20professional%20headshot%2C%20high%20quality%2C%20studio%20lighting%2C%20neutral%20background&width=400&height=500&seq=14&orientation=portrait" alt="Neha Gupta" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-900">Neha Gupta</h3>
+<p class="text-gray-600">SEO Director</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">Neha Gupta</h3>
+<p class="text-white mb-4">SEO Director</p>
+<p class="text-white text-center mb-6">Neha is an SEO wizard with a proven track record of improving search rankings for our clients.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="team-card group relative overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20an%20Indian%20businessman%20in%20his%2020s%2C%20wearing%20a%20casual%20business%20outfit%2C%20friendly%20smile%2C%20office%20setting%2C%20professional%20headshot%2C%20high%20quality%2C%20studio%20lighting%2C%20neutral%20background&width=400&height=500&seq=15&orientation=portrait" alt="Arjun Kapoor" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-900">Arjun Kapoor</h3>
+<p class="text-gray-600">Social Media Strategist</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">Arjun Kapoor</h3>
+<p class="text-white mb-4">Social Media Strategist</p>
+<p class="text-white text-center mb-6">Arjun creates engaging social media campaigns that connect brands with their target audience.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Team Member 4 -->
+<div class="team-card group relative overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20an%20Indian%20businesswoman%20in%20her%2020s%2C%20wearing%20a%20modern%20casual%20business%20outfit%2C%20creative%20style%2C%20office%20setting%2C%20professional%20headshot%2C%20high%20quality%2C%20studio%20lighting%2C%20neutral%20background&width=400&height=500&seq=16&orientation=portrait" alt="Riya Sharma" class="w-full h-80 object-cover object-top">
+<div class="p-6 bg-white">
+<h3 class="text-xl font-semibold text-gray-900">Riya Sharma</h3>
+<p class="text-gray-600">Content Director</p>
+</div>
+<div class="team-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+<h3 class="text-xl font-semibold text-white mb-2">Riya Sharma</h3>
+<p class="text-white mb-4">Content Director</p>
+<p class="text-white text-center mb-6">Riya leads our content team, creating compelling stories that drive engagement and conversions.</p>
+<div class="flex space-x-3">
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-primary hover:bg-opacity-90 transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Marcadors</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="max-w-3xl mx-auto text-gray-600">We combine data-driven strategies with creative solutions to deliver exceptional results for our clients.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+<i class="ri-line-chart-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Data-Driven Approach</h3>
+<p class="text-gray-600">We base our strategies on solid data and analytics, ensuring measurable results and continuous improvement.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+<i class="ri-team-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+<p class="text-gray-600">Our team of specialists brings years of experience and expertise in various aspects of digital marketing.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+<i class="ri-customer-service-2-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Personalized Service</h3>
+<p class="text-gray-600">We take the time to understand your business goals and create tailored strategies that meet your specific needs.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+<i class="ri-lightbulb-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Innovative Solutions</h3>
+<p class="text-gray-600">We stay ahead of industry trends and leverage the latest technologies to give your business a competitive edge.</p>
+</div>
+<!-- Feature 5 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+<i class="ri-file-list-3-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Transparent Reporting</h3>
+<p class="text-gray-600">We provide clear, comprehensive reports that show the real impact of our work on your business metrics.</p>
+</div>
+<!-- Feature 6 -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+<i class="ri-global-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Comprehensive Services</h3>
+<p class="text-gray-600">From SEO to social media to web development, we offer all the digital marketing services your business needs.</p>
+</div>
+</div>
+<!-- Client Logos -->
+<div class="mt-20">
+<h3 class="text-2xl font-semibold text-gray-900 mb-8 text-center">Trusted By</h3>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<div class="flex flex-col items-center">
+<i class="ri-amazon-fill ri-3x text-gray-400"></i>
+<span class="mt-2 text-gray-600 text-sm">Amazon</span>
+</div>
+<div class="flex flex-col items-center">
+<i class="ri-microsoft-fill ri-3x text-gray-400"></i>
+<span class="mt-2 text-gray-600 text-sm">Microsoft</span>
+</div>
+<div class="flex flex-col items-center">
+<i class="ri-netflix-fill ri-3x text-gray-400"></i>
+<span class="mt-2 text-gray-600 text-sm">Netflix</span>
+</div>
+<div class="flex flex-col items-center">
+<i class="ri-spotify-fill ri-3x text-gray-400"></i>
+<span class="mt-2 text-gray-600 text-sm">Spotify</span>
+</div>
+<div class="flex flex-col items-center">
+<i class="ri-airbnb-fill ri-3x text-gray-400"></i>
+<span class="mt-2 text-gray-600 text-sm">Airbnb</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="max-w-3xl mx-auto text-gray-600">Ready to transform your digital presence? Contact us today to discuss how we can help your business grow.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Contact Form -->
+<div class="bg-white p-8 rounded-lg shadow-lg">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Send Us a Message</h3>
+<form id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-gray-700 mb-2">Your Name</label>
+<input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary" required>
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2">Your Email</label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary" required>
+</div>
+</div>
+<div class="mb-6">
+<label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+<input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary">
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-gray-700 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary" required>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-gray-700 mb-2">Your Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-primary" required></textarea>
+</div>
+<div class="mb-6">
+<label class="custom-checkbox flex items-center">
+<input type="checkbox" required>
+<span class="checkmark"></span>
+<span class="ml-7 text-gray-700">I agree to the terms and privacy policy</span>
+</label>
+</div>
+<button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<!-- Contact Information -->
+<div>
+<div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-900 mb-1">Office Address</h4>
+<p class="text-gray-600">1st Floor, Plot No. 19, Opp. Police Station, Sector 135, Noida, Uttar Pradesh - 201304</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-900 mb-1">Phone Number</h4>
+<p class="text-gray-600">+91 70184 97936</p>
+<p class="text-gray-600">+91 12345 67890</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-900 mb-1">Email Address</h4>
+<p class="text-gray-600">info@marcadors.com</p>
+<p class="text-gray-600">support@marcadors.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mr-4">
+<i class="ri-time-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-900 mb-1">Working Hours</h4>
+<p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+<p class="text-gray-600">Saturday: 10:00 AM - 2:00 PM</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white hover:bg-opacity-90 transition-colors">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- Map -->
+<div class="bg-white p-4 rounded-lg shadow-lg h-80 overflow-hidden">
+<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d112202.98916723613!2d77.31878888780761!3d28.4993139531347!2m3!1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-16 bg-primary">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-3xl font-bold text-white mb-4">Subscribe to Our Newsletter</h2>
+<p class="text-white/80 mb-8">Stay updated with the latest digital marketing trends, tips, and insights.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+<input type="email" placeholder="Enter your email address" class="flex-1 px-6 py-3 rounded-button border-none focus:outline-none text-gray-700">
+<button type="submit" class="bg-secondary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Subscribe Now</button>
+</form>
+<p class="text-white/60 mt-4 text-sm">We respect your privacy. Unsubscribe at any time.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">Marcadors</a>
+<p class="text-gray-400 mb-6">Transforming digital presence through innovative marketing strategies and solutions.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary transition-colors">
+<i class="ri-twitter-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white hover:bg-primary transition-colors">
+<i class="ri-linkedin-fill"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-xl font-semibold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+<li><a href="#vision-mission" class="text-gray-400 hover:text-white transition-colors">Vision & Mission</a></li>
+<li><a href="#team" class="text-gray-400 hover:text-white transition-colors">Team</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h3 class="text-xl font-semibold mb-6">Our Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Digital Marketing Strategy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Search Engine Optimization</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Social Media Management</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Content Marketing</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pay-Per-Click Advertising</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-xl font-semibold mb-6">Contact Info</h3>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">1st Floor, Plot No 19, Sector 135, Bajidpur, Noida, Uttar Pradesh 201301</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">+91 70741 74452</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">info@marcadors.com</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-1">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-400">Mon - Fri: 9:00 AM - 6:00 PM</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">&copy; Concept & Develop by <b><mark>Roshan Gupta</b></mark>.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+</div>
+<div class="mt-4 md:mt-0 flex items-center space-x-4">
+<i class="ri-visa-fill ri-lg text-gray-400"></i>
+<i class="ri-mastercard-fill ri-lg text-gray-400"></i>
+<i class="ri-paypal-fill ri-lg text-gray-400"></i>
+<i class="ri-amazon-pay-fill ri-lg text-gray-400"></i>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile Menu Toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+} else {
+mobileMenuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
+}
+});
+// Smooth Scrolling for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+// Close mobile menu if open
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+}
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Portfolio Filter
+const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Remove active class from all buttons
+filterButtons.forEach(btn => btn.classList.remove('active'));
+// Add active class to clicked button
+this.classList.add('active');
+const filter = this.getAttribute('data-filter');
+portfolioItems.forEach(item => {
+if (filter === 'all' || item.getAttribute('data-category') === filter) {
+item.style.display = 'block';
+} else {
+item.style.display = 'none';
+}
+});
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Contact Form Submission
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(contactForm);
+const formDataObj = {};
+formData.forEach((value, key) => {
+formDataObj[key] = value;
+});
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-xl z-50';
+successMessage.innerHTML = `
+<div class="text-center">
+<i class="ri-checkbox-circle-line text-green-500 text-4xl mb-4"></i>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Thank You!</h3>
+<p class="text-gray-600 mb-4">Your message has been sent successfully.</p>
+<button class="bg-primary text-white px-6 py-2 rounded-button">Close</button>
+</div>
+`;
+document.body.appendChild(successMessage);
+successMessage.querySelector('button').onclick = () => {
+successMessage.remove();
+};
+contactForm.reset();
+});
+}
+// Service link click handlers
+document.querySelectorAll('.service-link').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const contactSection = document.querySelector('#contact');
+contactSection.scrollIntoView({ behavior: 'smooth' });
+});
+});
+});
+</script>
+</body>
+</html>
